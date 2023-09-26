@@ -1,0 +1,48 @@
+{
+  "consumer": {
+    "name": "singleEmpDetails"
+  },
+  "interactions": [
+    {
+      "description": "a request to get employee details for ID 1",
+      "providerState": "An employee with ID 1 exists",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/employee/1"
+      },
+      "response": {
+        "body": {
+          "data": {
+            "employee_age": 61,
+            "employee_name": "Tiger Nixon",
+            "employee_salary": 320800,
+            "id": 1,
+            "profile_image": ""
+          },
+          "message": "Successfully! Record has been fetched.",
+          "status": "success"
+        },
+        "headers": {
+          "Content-Type": "application/json",
+          "content-type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.1.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.7",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "allEmployees"
+  }
+}
